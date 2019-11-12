@@ -1,0 +1,13 @@
+.weather{
+    border: 1px solid black;
+    width: 60%; }
+
+.weathertitle{
+
+}
+
+.temperature{
+    font: bolder;
+    font-size: 2rem;
+}
+
