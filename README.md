@@ -1,10 +1,5 @@
-<br />
-<p align="center">
-  <a href="https://rawcdn.githack.com/samgaco/todolist/4c009a1851daeb5401494aabbd50beccec54308f/dist/index.html">
-    <img src="src/images/logo.png" alt="Logo">
-  </a>
 
-  <h3 align="center">Todo List</h3>
+  <h3 align="center">Weather Application</h3>
 
   <p align="center">
     JavaScript Project
@@ -33,7 +28,7 @@
 ## About The Project
 
   <a href="#">
-    <img src="src/images/bench.jpg" alt="Logo">
+    <img src="src/about.png" alt="Logo">
   </a>
 
 Based on the [Weather Application](https://www.theodinproject.com/courses/javascript/lessons/weather-app) in the odin project as a part of the Microverse curriculum
