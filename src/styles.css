@@ -1,8 +1,6 @@
 .back {
   background: url(wall.jpg); }
 
-/*  */
-
 .weather {
   border: 1px solid black;
   width: 35%;
@@ -18,6 +16,10 @@
   color: rgb(189, 170, 0);
 }
 
+::selection {
+  background-color: rgb(225, 228, 63);
+  color: white;
+}
 
 .dataweather {
   font: bolder;
