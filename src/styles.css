@@ -6,7 +6,7 @@
 .weather {
   border: 1px solid black;
   width: 35%;
-  margin: 5% auto auto 30%;
+  margin: 10% auto auto 32%;
   border-radius: 23px 25px 34px 40px;
   padding: 1%;
 
@@ -25,6 +25,11 @@
   color: rgb(189, 170, 0);
 
 
+}
+
+.weatherform{
+
+  margin: 1% auto auto 2%;
 }
 
 .temperature{
