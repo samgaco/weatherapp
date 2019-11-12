@@ -54,9 +54,17 @@ const domManager = (() => {
       }
 
 
-    const StartApp =(cityname) =>{
-                AddTitle(cityname);
-                renderData(cityname);
+
+    const StartApp = () => {
+
+        document.getElementById(`weather-check`).addEventListener('click', (evt) => {
+
+            let cityname = document.querySelector('#weather-check-input').value
+
+            AddTitle(cityname);
+            renderData(cityname);
+            
+          });
     }
 
     return{StartApp}
