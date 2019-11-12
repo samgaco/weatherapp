@@ -7,9 +7,9 @@ const domManager = (() => {
   const weathertitle = document.querySelector('#weathertitle');
   const key = 'c3e71b244675fb70f2b3fcf42479dbd8';
 
-  const toCelcius = (kelvin) => Math.round(kelvin - 273.15);
+  const toCelcius = kelvin => Math.round(kelvin - 273.15);
 
-  const toFar = (kelvin) => Math.round(32 + (toCelcius(kelvin) * 9) / 5);
+  const toFar = kelvin => Math.round(32 + (toCelcius(kelvin) * 9) / 5);
 
   const weather = {
     temperature: null,
