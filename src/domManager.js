@@ -54,6 +54,8 @@ const domManager = (() => {
         humidity.innerHTML = `Humidity: ${weather.humidity}%`;
       })
 
+      .catch(error => {temperature.innerHTML = `Not found. Please introduce another city.`
+                  humidity.innerHTML = ``    });
 
   }
 
