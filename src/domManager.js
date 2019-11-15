@@ -7,17 +7,19 @@ const domManager = (() => {
   const weathertitle = document.querySelector('#weathertitle');
   const key = 'c3e71b244675fb70f2b3fcf42479dbd8';
 
-  const toCelcius = kelvin => Math.round(kelvin - 273.15);
-
-  const toFar = kelvin => Math.round(32 + (toCelcius(kelvin) * 9) / 5);
-
-  const weather = {
-    temperature: null,
-    humidity: null,
+  const weatherStruct = () => {
+    const weather = {
+      temperature: null,
+      humidity: null,
+    };
+    return weather;
   };
 
   const renderData = (cityname) => {
-    const api = `http://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${key}`;
+    let celsius = true;
+    let metric = 'Metric';
+    const weather = weatherStruct();
+    let api = `http://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${key}&units=${metric}`;
 
     fetch(api)
 
@@ -29,17 +31,44 @@ const domManager = (() => {
       .then((data) => {
         weather.temperature = data.main.temp;
         weather.humidity = data.main.humidity;
-        let celcius = true;
 
-        temperature.innerHTML = `Temperature: ${toCelcius(weather.temperature)}C/ F`;
+        temperature.innerHTML = `Temperature: ${weather.temperature}C/ F`;
 
         temperature.addEventListener('click', (evt) => {
-          if (celcius) {
-            temperature.innerHTML = `Temperature: ${toFar(weather.temperature)}F/ C`;
-            celcius = false;
+          if (celsius) {
+            celsius = false;
+            metric = 'Imperial';
+            api = `http://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${key}&units=${metric}`;
+            fetch(api)
+
+              .then((response) => {
+                const data2 = response.json();
+                return data2;
+              })
+
+              .then((data2) => {
+                weather.temperature = data2.main.temp;
+                weather.humidity = data2.main.humidity;
+
+                temperature.innerHTML = `Temperature: ${weather.temperature}C/ F`;
+              });
           } else {
-            temperature.innerHTML = `Temperature: ${toCelcius(weather.temperature)}C/ F`;
-            celcius = true;
+            celsius = true;
+            metric = 'Metric';
+            api = `http://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${key}&units=${metric}`;
+            fetch(api)
+
+              .then((response) => {
+                const data3 = response.json();
+                return data3;
+              })
+
+              .then((data3) => {
+                weather.temperature = data3.main.temp;
+                weather.humidity = data3.main.humidity;
+
+                temperature.innerHTML = `Temperature: ${weather.temperature}C/ F`;
+              });
           }
         });
 
