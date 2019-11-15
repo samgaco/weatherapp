@@ -5,7 +5,7 @@
     JavaScript Project
     <br />
     <br />
-    <a href="#">View Demo</a>
+    <a href="https://rawcdn.githack.com/samgaco/weatherapp/12acd72d850ef72a5ed260ad6c1b274150aaf01d/dist/index.html">View Demo</a>
     ·
     <a href="https://github.com/samgaco/todolist/issues">Report Bug</a>
     ·
@@ -27,7 +27,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-  <a href="#">
+  <a href="https://rawcdn.githack.com/samgaco/weatherapp/12acd72d850ef72a5ed260ad6c1b274150aaf01d/dist/index.html">
     <img src="src/about.png" alt="Logo">
   </a>
 
