@@ -1,0 +1,41 @@
+.back {
+  background: url(wall.jpg); }
+
+.weather {
+  border: 1px solid black;
+  width: 35%;
+  margin: 10% auto auto 32%;
+  border-radius: 23px 25px 34px 40px;
+  padding: 1%;
+
+  background: url(https://media.giphy.com/media/1TpGKApbHmkZa/giphy.gif);
+  font-family: "Lilita One", cursive;
+}
+
+#weathertitle {
+  color: rgb(189, 170, 0);
+}
+
+::selection {
+  background-color: rgb(225, 228, 63);
+  color: white;
+}
+
+.dataweather {
+  font: bolder;
+  font-size: 2rem;
+  color: rgb(189, 170, 0);
+
+
+}
+
+.weatherform{
+
+  margin: 1% auto auto 2%;
+}
+
+.temperature{
+  cursor: pointer;
+  color: rgb(189, 170, 0);
+
+}
